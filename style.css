@@ -1,0 +1,113 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* GENERAL RULES */
+body {
+  padding: 16px;
+  line-height: 1;
+  color: rgb(0, 23, 50);
+  background-color: rgb(216, 238, 232);
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+.game-container {
+  width: 484px;
+}
+
+/* GAME PANEL */
+h1 {
+  font-size: 40px;
+}
+
+.score {
+  font-size: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* GAME BOARD */
+.game-board {
+  position: relative;
+  border: 2px solid rgb(0, 23, 50);
+}
+
+.grid {
+  height: 480px;
+  width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.cell {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.cell-dark {
+  background-color: rgb(203, 224, 221);
+}
+
+.cell:hover,
+.cell-clicked {
+  background-color: rgb(157, 197, 199);
+}
+
+.cell-bomb {
+  background-color: rgb(241, 117, 78);
+  background-image: url("images/bomb.png");
+  background-size: contain;
+}
+
+.cell-clicked,
+.cell-bomb {
+  cursor: not-allowed;
+}
+
+/* WINNER AND LOOSER SCREEN */
+.end-game-screen {
+  background-color: rgba(241, 117, 78, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.win {
+  background-color: rgba(78, 241, 187, 0.6);
+}
+
+.end-game-text {
+  font-size: 48px;
+  line-height: 1.2;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 16px;
+}
+
+button {
+  border: 2px solid rgb(0, 23, 50);
+  font-size: 24px;
+  font-family: "Darker Grotesque", sans-serif;
+  text-transform: uppercase;
+  padding: 4px 20px 8px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(203, 224, 221);
+}
+
+.hidden {
+  display: none;
+}
